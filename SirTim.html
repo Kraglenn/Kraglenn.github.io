@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <title>Some Pretty Neat Communication Technology Stuff</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="icon" href="Penguin.png" type="image/x-icon"/>
+  <style>
+  body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+  body {font-size:16px;}
+  .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+  .w3-half img:hover{opacity:1}
+  </style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container" style="margin-bottom:25px">
+    <h3 class="w3-padding-20" style="font-size:30px"><b>Some Stuff<br>About Communcation Technologies</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Top" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">Up Top!</a>
+    <a href="#Intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">Read This First!</a>
+    <a href="#SirTim" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">Our Lord, Sir Tim-Berners Lee</a>
+    <a href="#Terms" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">Common Terms and Definitions, Chump</a>
+    <a href="#Data" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">The Transmission of Data</a>
+    <a href="#Plex" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">All the Plexs'</a>
+    <a href="#Internet" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">How Internet Be</a>
+    <a href="#Bibliography" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="margin-bottom:15px">My Bibliography</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Whitaker Education</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" id="Top">
+    <h1 class="w3-jumbo"><b>Internets and Stuff</b></h1>
+
+  </div>
+  <div class="w3-container" id="Intro" style="margin-top:15px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>This Website is all about,</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This website will tackle 4 very important topics regarding communication technologies, such as; "Sir Tim-Berners Lee", "How Data is Transmitted", "The Half-Duplex, Simple-Duplex and Full-Duplex" and "How the Internet Actually Works". On top of that, it will also give you 15 terms and their definitions, with everything being presented in a clear, modern and truly beautiful look. Please enjoy, thank you.</p>
+  </div>
+
+  <!-- Photo grid (modal)
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div> -->
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="SirTim" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our Lord, Sir Tim-Berners Lee!</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>It was, Sir Tim-Berners Lee, the child of two early computer scientists who invented the WWW in an effort to make communication between scientists working on the CERN particle physics laboratory far easier. So he simply took the already fast developing internet and invented a communication protocol, that way where they could all understand each other through hyper text.</p>
+    <br>
+    <p>There are 3 things that Sir Tim-Berners Lee has to invent to make the WWW work, HTML, HTTP and URI. HTML, is the actual language that websites are written in and are the files that are read by the Web Browser. HTTP is the protocol between the different devices that allows all this to happen. And the URI/URL is the address that is unique and used to identify each resource on the web.</p>
+    <br>
+    <p>Well the impact of the decentralized and royalty free design of the WWW were monumental as these things essentially made it possible for anything to exist and to almost immediately have a sizable audience at hand. This allowed for the creation and growth of literally tens of thousands of companies, from “Reddit”, to “FaceBook” to “Google”. Which all began as small projects from individuals, and thats what the internet is all about, individuals.</p>
+    <br>
+    <div class="container" style="display:flex;justify-content:center;align-items:center;">
+      <p>Here are some of the principles behind the internet; (this was acquired from <a href="https://webfoundation.org/about/vision/history-of-the-web/"> here!</a> );</p>
+    </div>
+    <div class="container" style="display:flex;justify-content:center;align-items:center;">
+            <div class="w3-half w3-margin-bottom">
+              <ul class="w3-ul w3-light-grey w3-center">
+                <li class="w3-dark-grey w3-xlarge w3-padding-32">Principles of the Internet</li>
+                <li class="w3-padding-16"><h3>Decentralisation</h3><p>No permission is needed from a central authority to post anything on the web, there is no central controlling node, and so no single point of failure … and no “kill switch”! This also implies freedom from indiscriminate censorship and surveillance.</p></li>
+                <li class="w3-padding-16"><h3>Non-discrimination</h3><p>If I pay to connect to the internet with a certain quality of service, and you pay to connect with that or a greater quality of service, then we can both communicate at the same level. This principle of equity is also known as Net Neutrality.</p></li>
+                <li class="w3-padding-16"><h3>Bottom-up design</h3><p>Instead of code being written and controlled by a small group of experts, it was developed in full view of everyone, encouraging maximum participation and experimentation.</p></li>
+                <li class="w3-padding-16"><h3>Universality</h3><p>For anyone to be able to publish anything on the web, all the computers involved have to speak the same languages to each other, no matter what different hardware people are using; where they live; or what cultural and political beliefs they have. In this way, the web breaks down silos while still allowing diversity to flourish.</p></li>
+                <li class="w3-padding-16"><h3>Consensus</h3><p>For universal standards to work, everyone had to agree to use them. Tim and others achieved this consensus by giving everyone a say in creating the standards, through a transparent, participatory process at W3C.</p></li>
+              </ul>
+            </div>
+    </div>
+
+
+
+<!--
+  <div style="display:flex;justify-content:center;align-items:center;">
+  <div></div>
+</div>
+-->
+
+  <!-- Terms Title and Text -->
+  <div class="w3-container" id="Terms" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Common Terms and Definitions, Chump.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>All the different Terms you should know and understand, if you want to be educated on the extensive and incredible topics available to you on this amazing website.</p>
+  </div>
+
+  <!-- Terms and Definitions -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"The Internet"</h3>
+          <p>A network of networks.<br></br><br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"ISP"</h3>
+          <p>Internet Service Provider, the people you pay to grant you access to the internet.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"NIC"</h3>
+          <p>Network Interface Card, every computer that connects to a network has one, but most are incorporated into the motherboard, they usually have WIFI!<br></br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"URL"</h3>
+          <p>Uniform Resource Locator, this is your websites address on the web.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Web Browser"</h3>
+          <p>Application Software to access, or 'browse' the Web.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Modem"</h3>
+          <p>Most routers today include a 'broadband modem'.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"CSS"</h3>
+          <p>Stands for "Cascading Style Sheet." Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Packet"</h3>
+          <p>A unit of Data that can be sent across a network.<br></br><br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Cookies"</h3>
+          <p>Data, that is stored on the clients computer when a website is visited. Can store prefrences for that website - i.e. keeping a user logged in.<br><br></br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Protocol"</h3>
+          <p>An agreed set of rules for how to communicate. This incldudes 'handshaking' and there is a rule for who shakes first! This is very useful for HTTP(S) requests and responses.<br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"HTTP"</h3>
+          <p><b>H</b>yper<b>t</b>ext <b>T</b>ransfer <b>P</b>rotocol. The agreed set of rules for how to transmit 'Hypertext' - a.k.a. the Web.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"HTTPS"</h3>
+          <p>The agreed set of rules for how transmit 'Hypertext' in a secure way - uses encryption.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"TCP/IP"</h3>
+          <p>Transmission Control Protocol,<br></br> after access to the website is gained using HTTP, TCP/IP is the protocol that transmits the data between the client and the server.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"IP Address"</h3>
+          <p>Internet Protocol Address, Every device on a network, LAN or WAN, needs to have an address. This is so data packets know where they need to go as they travel through the network. It is usually the routers job to give each device connected to it an IP address. IP addresses can change.<br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"MAC Address"</h3>
+          <p>Media Access Control, We need a unique way of identifying each physical address of the device. it is normaly 6 pairs of hex numbers MAC addresses are unique to each device. They do not change.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Client"</h3>
+          <P>A desktop computer or workstation that is capable of obtaining information and applications from a server.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Server"</h3>
+          <p>A computer or computer program that manages access to a centralized resource or service in a network.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Hub"</h3>
+          <p>Hubs are devices commonly used to connect segments of a LAN. The hub contains multiple ports. When a packet arrives at one port, it is copied to the other ports so that all segments of the LAN can see all packets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"LAN"</h3>
+          <p>A local area network is a network that connects computers and other devices in a relatively small area, typically a single building or a group of buildings.<br></br><br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"WAN"</h3>
+          <p>A computer network in which the computers connected may be far apart, generally having a radius of half a mile or more.<br></br><br></br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>"Switch"</h3>
+          <p>A network switch is a computer networking device that connects devices together on a computer network by using packet switching to receive, process, and forward data to the destination device.<br></br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Transmission of Data -->
+  <div class="w3-container" id="Data" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>The Transmission of Data.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3>Serial Data Transmission</h3>
+    <br>
+    <p>Serial Transmission is the transmission of data one bit at a time. The device willt ake the information and serialise it, turning it into  seperate bits and transmitting them one at a time.</p>
+    <br></br>
+    <h3>Parallel Data Transmission</h3>
+    <br>
+    <p>Parallel Data Transmission is the same as Serial Transmission, except instead of only have one lane, you can have as many as you want, this is mostly use for transmission of large files over a short distance, and is used mostly directly through the motherboard for things such as RAM, the CPU, or the GPU which all require fast real time transmission of data.</p>
+
+    <br>
+
+    <p>Below is a table that simplistically compares the two forms of data transmission over a wire, with both their positives and their negatives.</p>
+
+    <div class="w3-row-padding">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Serial Data Transmission</li>
+          <li class="w3-padding-16">The most common form of data transmission and by far the best for transmitting data over long distances.</li>
+          <li class="w3-padding-16">Uses a single wire, far reduced cost compared to parralell</li>
+          <li class="w3-padding-16">Slower than parallel over short distances.</li>
+          <li class="w3-padding-16">Easier to check the recived packet as it arries all at once. Therefor serieal data transmission is far more reliable.<br></br></li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-red w3-xlarge w3-padding-32">Parallel Data Transmission</li>
+          <li class="w3-padding-16">Faster data transmission as each bit is sent over a different wire.</li>
+          <li class="w3-padding-16">Requires far more resources and this increases cost and practicality.</li>
+          <li class="w3-padding-16">Should only be used over very short distances.</li>
+          <li class="w3-padding-16">Very vulnerable to signal interference, especially over long distances. Checking all the bits have arrives on reciever's side is inefficient.<br></br></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- All the Plexs' -->
+  <div class="w3-container" id="Plex" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>All the Plexs'.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3>Simplex</h3>
+    <br>
+    <p>Simplex uses only one lane of communication between two devices. A common analogy is a one-way road, where cars can go one way, but not the other, in the real world, the most common use of Simplex is with a mouse and a keyboard, where most of the time, a mouse or a keyboard will need to send information ot the CPU but not the other way round, hence no need for anything more than duplex.</p>
+    <br></br>
+    <h3>Full - Duplex</h3>
+    <br>
+    <p>Following the analogy with roads, a Full-Duplex is your regular 2 lane highway, where inforamtion and cars can be sent either way without an issues, this is the most common of the 3 data transmission systems as most devices need to talk to each other to work eifficiently and properly. For example with netowrking, your computer will have a Full-Duplex connection to the server, as your computer needs to send information to the server and vice-versa.</p>
+    <br></br>
+    <h3>Half - Duplex</h3>
+    <br>
+    <p>For our final road analogy, the Half-Duplex is like your tunnel road, where traffic can only pass through in one direction at a time. There are so few examples of this that it's almost pointless to learn about. However it is more cost advantage compared to a Full-Duplex but also half as slow.</p>
+  </div>
+
+
+  <!-- How Internet Be -->
+  <div class="w3-container" id="Internet" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>How Internet Be.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We can connect 2 computers to each other fairly easily, by using an ethernet cable or wirelessly with WIFI or Bluetooth. But we could connect more, however there reaches a point where it would be far simple to use a “router”. A router simply has a direct connection to each computer and directs a message from one computer to the next. Say we had 3 computers in our network, A, B and C, if C sent a message to A, the router would take the message from C and send it to A. Easy as. </p>
+    <br>
+    <p>But lets plug one router into the next, now we’ve got a much larger network of computers, then we could just keep connecting router to router however this is only a personal network it doesn’t connect to anything else. So what already in place infrastructure could we use to connect to the rest of the world? </p>
+    <br>
+    <p>Why the telephone cables of course. This is where the “modem” comes into play. A modem turns the information from our network into information manageable by the telephone infrastructure and vice versa. So now we’re connected to the telephone infrastructure. The next step is to send the messages from our network to the network we want to reach. To do that, we will connect our network to an Internet Service Provider.</p>
+    <br>
+    <p> An ISP is a company that manages some special routers that link all together and can also access other ISPs' routers. So the message from our network is carried through the network of ISP networks to the destination network. The Internet consists of this whole infrastructure of networks. By the end, it looks something like this;</p>
+
+    <div class="container" style="display:flex;justify-content:center;align-items:center;">
+      <img src="i.png" alt="The Network">
+    </div>
+
+  <div class="w3-container" id="Bibliography" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Bibliography</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work</p>
+    <p>https://webfoundation.org/about/vision/history-of-the-web/</p>
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-25" style="margin-top:25px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
